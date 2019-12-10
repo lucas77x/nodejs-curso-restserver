@@ -18,7 +18,7 @@ app.use( require('./routes/usuario'));
 // lucas: V7QZDXveXxwkst1l
 // mongodb+srv://lucas:V7QZDXveXxwkst1l@cluster0-0cwng.mongodb.net/cafe
 
-console.log( process.env.URLDB );
+//console.log( process.env.URLDB );
 
 mongoose.connect(process.env.URLDB, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true},
                 (err, res) => {        

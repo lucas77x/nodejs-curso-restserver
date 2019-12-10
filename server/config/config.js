@@ -15,10 +15,10 @@ let urlDB;
 
 if( 0 )
 {
-    urlDB = 'mongodb://localhost:27017/productos';
+    urlDB = 'mongodb://localhost:27017/cursonode';
 }
 else
 {
-    urlDB = 'mongodb+srv://lucas:V7QZDXveXxwkst1l@cluster0-0cwng.mongodb.net/cafe';
+    urlDB = 'mongodb+srv://lucas:V7QZDXveXxwkst1l@cluster0-0cwng.mongodb.net/cursonode';
 }
 process.env.URLDB = urlDB;
