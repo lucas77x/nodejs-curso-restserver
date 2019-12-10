@@ -13,12 +13,12 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
 // =========================
 let urlDB;
 
-if( process.env.NODE_ENV === 'dev' )
+if( 0 )
 {
     urlDB = 'mongodb://localhost:27017/productos';
 }
 else
 {
-    url = 'mongodb+srv://lucas:V7QZDXveXxwkst1l@cluster0-0cwng.mongodb.net/cafe';
+    urlDB = 'mongodb+srv://lucas:V7QZDXveXxwkst1l@cluster0-0cwng.mongodb.net/cafe';
 }
 process.env.URLDB = urlDB;
