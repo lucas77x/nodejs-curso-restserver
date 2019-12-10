@@ -13,7 +13,7 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
 // =========================
 let urlDB;
 
-if( 0 )
+if (process.env.NODE_ENV === 'dev' )
 {
     urlDB = 'mongodb://localhost:27017/cursonode';
 }
