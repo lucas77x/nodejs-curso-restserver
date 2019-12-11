@@ -11,8 +11,8 @@ app.use(bodyParser.urlencoded({ extended: false}));
 // parse application/json
 app.use(bodyParser.json());
 
-// Incluyo archivo con las rutas del usuario
-app.use( require('./routes/usuario'));
+// Incluyo las rutas 
+app.use(require('./routes/index'));
 
 //Conexion a DB
 // lucas: V7QZDXveXxwkst1l
@@ -20,12 +20,13 @@ app.use( require('./routes/usuario'));
 
 //console.log( process.env.URLDB );
 
-mongoose.connect(process.env.URLDB, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true},
-                (err, res) => {        
+mongoose.connect(process.env.URLDB, 
+    { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false},
+    (err, res) => {        
 
-    if(err) throw new err;
-    console.log('Base de datos ONLINE!');
+        if(err) throw new err;
+        console.log('Base de datos ONLINE!');
 });
 
 
-app.listen(process.env.PORT, () => { console.log(`Escuchando el puerto ${process.env.PORT}`); })
+app.listen(process.env.PORT, () => { console.log(`Escuchando el puerto ${ process.env.PORT }`); })

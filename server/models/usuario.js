@@ -43,6 +43,15 @@ let usuarioSchema = new Schema({
     }
 });
 
+// Excluir atributos
+usuarioSchema.methods.toJSON = function () {
+
+    let userObject = this.toObject();
+    delete userObject.password;    
+    delete userObject.__v;    
+    return userObject;
+}
+
 usuarioSchema.plugin( uniqueValidator, {
     message: '{PATH} debe ser unico'
 });
