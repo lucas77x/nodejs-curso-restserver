@@ -14,16 +14,14 @@ app.use(bodyParser.json());
 
 // Habilitar la carpeta public
 app.use(express.static(path.resolve(__dirname, '../public')));
-console.log(path.resolve(__dirname, '../public'));
+//console.log(path.resolve(__dirname, '../public'));
 
 // Incluyo las rutas 
 app.use(require('./routes/index'));
 
-
-
-
 // Google sign in
 // Generar en:     https://developers.google.com/identity/sign-in/web/sign-in
+// Consola:        https://console.developers.google.com
 // client_id:      290449245938-ejv1n291ijgubosedub0mikh4oiro0h3.apps.googleusercontent.com 
 // client secret:  pOSM0-7_wpSaJ3xAPmhQLCNF 
 

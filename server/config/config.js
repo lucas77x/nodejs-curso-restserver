@@ -11,7 +11,7 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
 // =========================
 // VENCIMIENTO DEL TOKEN
 // =========================
-process.env.TOKEN_EXPIRE = 60 * 60 * 24 * 30;
+process.env.TOKEN_EXPIRE = '480h';
 
 // =========================
 // SEED
