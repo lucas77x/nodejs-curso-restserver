@@ -148,7 +148,7 @@ function imagenProducto(id, res, archivoNombre, tipo){
 
         if (err) {
 
-            borraArchivo(productoDB.img, tipo);
+            borraArchivo(archivoNombre, tipo);
 
             return res.status(500).json({
                 ok: false,
@@ -158,7 +158,7 @@ function imagenProducto(id, res, archivoNombre, tipo){
 
         if (!productoDB) {
 
-            borraArchivo(productoDB.img, tipo);
+            borraArchivo(archivoNombre, tipo);
 
             return res.status(400).json({
                 ok: false,
