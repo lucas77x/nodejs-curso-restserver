@@ -189,7 +189,6 @@ function imagenProducto(id, res, archivoNombre, tipo){
 
 function borraArchivo(archivoNombre, tipo){
 
-
     // Elimina el archivo anterior
     let pathImagen = path.resolve(__dirname, `../../uploads/${tipo}/${archivoNombre}`);
     if (fs.existsSync(pathImagen)) {
