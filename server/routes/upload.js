@@ -62,6 +62,11 @@ app.put('/upload/:tipo/:id', function (req, res) {
     // Cambio nombre al archivo
     let archivoNombre = `${ id }-${ new Date().getMilliseconds() }.${ extension }`;
     
+    let dir = `uploads/${tipo}`;
+    if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir);
+    }
+
     archivo.mv(`uploads/${tipo}/${archivoNombre}`, (err, archivoCargado) => {
 
         if (err){
