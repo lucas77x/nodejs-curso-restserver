@@ -70,8 +70,6 @@ app.put('/upload/:tipo/:id', function (req, res) {
                 ok: false,
                 err
             });
-
-
         });
     }
 
