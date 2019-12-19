@@ -64,7 +64,15 @@ app.put('/upload/:tipo/:id', function (req, res) {
     
     let dir = `/uploads/${tipo}`;
     if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir);
+        fs.mkdirSync(dir, (err) => {
+
+            return res.status(500).json({
+                ok: false,
+                err
+            });
+
+
+        });
     }
 
     archivo.mv(`uploads/${tipo}/${archivoNombre}`, (err, archivoCargado) => {
