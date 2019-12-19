@@ -68,8 +68,9 @@ app.put('/upload/:tipo/:id', function (req, res) {
 
             return res.status(500).json({
                 ok: false,
-                err
+                el_error: err
             });
+
         });
     }
 
@@ -181,11 +182,14 @@ function imagenProducto(id, res, archivoNombre, tipo){
         });
 
 
+
+
     });
 
 }
 
 function borraArchivo(archivoNombre, tipo){
+
 
     // Elimina el archivo anterior
     let pathImagen = path.resolve(__dirname, `../../uploads/${tipo}/${archivoNombre}`);
