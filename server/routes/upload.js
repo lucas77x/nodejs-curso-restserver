@@ -181,8 +181,6 @@ function imagenProducto(id, res, archivoNombre, tipo){
         });
 
 
-
-
     });
 
 }
